@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 
-
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
@@ -15,5 +14,14 @@ class ProductPageLocators():
 	ADD_TO_CART_MESSAGE = (By.CSS_SELECTOR, '#messages > div:nth-child(1)')
 	PRODUCT_NAME_ADDING_TO_BASKET = (By.CSS_SELECTOR, "#messages > div:nth-child(1) > div > strong")
 	CART_COST = (By.CSS_SELECTOR, '#messages > div.alert.alert-safe.alert-noicon.alert-info.fade.in > div > p:nth-child(1) strong')
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_BUTTON = (By.CSS_SELECTOR, ".basket-mini > span > a")
+
+class BasketPageLocators():
+    BASKET_ITEMS = (By.CSS_SELECTOR, '.basket-items')
+    EMPTY_MESSAGE = (By.XPATH, '//*[@id="content_inner"]/p')
 
 	

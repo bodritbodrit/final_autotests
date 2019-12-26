@@ -37,3 +37,9 @@ class ProductPage(BasePage):
     def cart_cost_should_be_equal_price_of_the_product(self):
         assert self.text_of_the_element(*ProductPageLocators.PRODUCT_PRICE) == self.text_of_the_element(*ProductPageLocators.CART_COST),\
             "Prices of products are not the same"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.ADD_TO_CART_MESSAGE), "Added to cart message is presented"
+
+    def success_message_should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.ADD_TO_CART_MESSAGE), "Added to cart message not disappeared"
