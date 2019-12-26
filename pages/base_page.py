@@ -4,7 +4,7 @@ from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from .locators import ProductPageLocators, BasePageLocators
+from .locators import ProductPageLocators, BasePageLocators, MainPageLocators
 
 
 class BasePage():
@@ -56,4 +56,6 @@ class BasePage():
     def go_to_basket_page(self):
     	link = self.browser.find_element(*BasePageLocators.BASKET_BUTTON)
     	link.click()
+
+    
     
